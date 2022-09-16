@@ -39,11 +39,10 @@ jobs:
         path: bin 
       displayName: deploy iflow
     - script: |
-          
-           bin/piper integrationArtifactDeploy --verbose --apiServiceKey $(CREDENTIALS) --integrationFlowId "test1"
-           bin/piper integrationArtifactDownload --verbose --apiServiceKey $(CREDENTIALS) $(GIT_URL) $(GITUN) $(GITPWD)    --integrationFlowId "test1" --integrationFlowVersion "1.0.13"   --downloadPath "/Iflows"
-           ls -a /Iflows
-           git status
-           git checkout main
+          pwd
+          ls -ltr
+          cd Iflows
+           
+           
            
  
